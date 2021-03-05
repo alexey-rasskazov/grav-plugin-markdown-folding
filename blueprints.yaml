@@ -1,0 +1,32 @@
+name: Markdown Folding
+slug: markdown-folding
+type: plugin
+version: 0.1.0
+description: Adds the ability to render collapsible sections in Markdown
+icon: plug
+author:
+  name: Alexey Rasskazov
+  email: ra0702@yandex.ru
+homepage: https://github.com/alexey-rasskazov/grav-plugin-markdown-folding
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/alexey-rasskazov/grav-plugin-markdown-folding/issues
+docs: https://github.com/alexey-rasskazov/grav-plugin-markdown-folding/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

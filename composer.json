@@ -1,0 +1,29 @@
+{
+  "name": "alexey-rasskazov/markdown-folding",
+  "type": "grav-plugin",
+  "description": "Adds the ability to render collapsible sections in Markdown",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/alexey-rasskazov/grav-plugin-markdown-folding",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexey Rasskazov",
+      "email": "ra0702@yandex.ru",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\MarkdownFolding\\": "classes/"
+    },
+    "classmap":  ["markdown-folding.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}

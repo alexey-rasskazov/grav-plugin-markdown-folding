@@ -1,0 +1,70 @@
+.folding-block {
+    margin: 0.2em 0;
+}
+.collapse-switch {
+    clear: both;
+    cursor: pointer;
+}
+span.collapse-switch {
+    font-size: 1.1em;
+    line-height: 1.19em;
+}
+.collapse-switch::before {
+    content: ' ';
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-right: 0.5em;
+    border-style: solid;
+    border-width: 0.3em 0 0.3em 0.6em;
+    border-color: transparent transparent transparent #5ea1f7;
+    color: #5ea1f7;
+    transition: transform ease 0.4s;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+div.collapsible {
+    visibility: hidden;
+    transition: all 0.2s ease;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 0.2em;
+    padding-left: 1em;
+}
+.collapse-switch[data-collapsed=false]::before {
+    transform: rotate(90deg);
+}
+.collapse-switch[data-collapsed=false] + div.collapsible {
+    visibility: visible;
+}
+
+/* colors */
+
+.collapse-switch.text-blue {
+    color: #5ea1f7;
+}
+
+.collapse-switch.text-red {
+    color: #d73e48
+}
+.collapse-switch.marker-red::before {
+    border-color: transparent transparent transparent #d73e48;
+    color: #d73e48;
+}
+
+.collapse-switch.text-green {
+    color: #16880b
+}
+.collapse-switch.marker-green::before {
+    border-color: transparent transparent transparent #16880b;
+    color: #16880b;
+}
+
+.collapse-switch.text-gray {
+    color: #6c6c6c
+}
+.collapse-switch.marker-gray::before {
+    border-color: transparent transparent transparent #6c6c6c;
+    color: #6c6c6c;
+}
+
